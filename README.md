@@ -50,6 +50,17 @@ npm run preview
 
 > **Nota:** `crypto.subtle` solo funciona en contextos seguros (`https://` o `localhost`). Si se abre la app desde otra IP de la red local por `http`, el registro y el login no funcionarán.
 
+## Despliegue en GitHub Pages
+
+Versión publicada: **https://davidpereznuma.github.io/gestor-tareas/**
+
+El despliegue es automático: el workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) compila la app y publica la carpeta `dist/` en cada `push` a `main`.
+
+- En `vite.config.js` la ruta base de producción es `/gestor-tareas/` (el nombre del repositorio).
+- `BrowserRouter` usa esa misma base (`import.meta.env.BASE_URL`).
+- `npm run build` copia `index.html` como `404.html` para que, al recargar en `/gestor-tareas/tareas`, GitHub Pages siga cargando la app.
+- En el repositorio, **Settings → Pages → Source** debe estar en **GitHub Actions**.
+
 ## Estructura de carpetas
 
 ```
