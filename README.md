@@ -60,7 +60,7 @@ gestor-tareas/
 ├── public/
 │   └── favicon.svg
 ├── docs/
-│   └── capturas/            # Capturas de pantalla para este README
+│   └── capturas/            # Capturas de pantalla (01-login.png ... 11-movil-nueva-tarea.png)
 └── src/
     ├── main.jsx             # Punto de entrada: Router + proveedores de contexto
     ├── App.jsx              # Definición de rutas
@@ -96,19 +96,58 @@ gestor-tareas/
 
 ## Capturas de pantalla
 
-### Inicio de sesión
-![Inicio de sesión](docs/capturas/login.png)
+### 1. Inicio de sesión
+Formulario de acceso con validación de correo y contraseña.
 
-### Registro
-![Registro](docs/capturas/registro.png)
+![Inicio de sesión](docs/capturas/01-login.png)
 
-### Tablero de tareas
-![Tablero de tareas](docs/capturas/tareas.png)
+### 2. Registro
+Creación de cuenta con nombre, correo, contraseña y confirmación.
 
-### Edición de tarea
-![Edición de tarea](docs/capturas/editar.png)
+![Registro](docs/capturas/02-registro.png)
 
-### Vista móvil
-![Vista móvil](docs/capturas/movil.png)
+### 3. Tablero vacío
+Vista inicial de un usuario nuevo: las tres columnas por estado sin tareas.
 
-> Para actualizar las capturas: ejecuta `npm run dev`, toma las imágenes y guárdalas en `docs/capturas/` con los nombres indicados.
+![Tablero vacío](docs/capturas/03-tablero-vacio.png)
+
+### 4. Tablero con tareas
+Tareas organizadas en *Pendiente*, *En progreso* y *Completada*. Cada tarjeta muestra la prioridad con su color (rojo = Alta, ámbar = Media, verde = Baja), la fecha de vencimiento, el selector para cambiar de estado y los botones **Completar**, **Editar** y **Eliminar**. Las tareas completadas aparecen tachadas.
+
+![Tablero con tareas](docs/capturas/04-tablero-con-tareas.png)
+
+### 5. Filtro por estado
+Al filtrar por un estado solo se muestra esa columna, junto con el número de coincidencias.
+
+![Filtro por estado](docs/capturas/05-filtro-estado.png)
+
+### 6. Filtro por prioridad
+Filtrando por prioridad **Alta**: se mantienen las tres columnas, pero solo con las tareas que coinciden.
+
+![Filtro por prioridad](docs/capturas/06-filtro-prioridad.png)
+
+### 7. Búsqueda
+Búsqueda en tiempo real por título o descripción. Se puede combinar con los filtros de estado y prioridad.
+
+![Búsqueda](docs/capturas/07-busqueda.png)
+
+### 8. Edición de tarea
+Modal de edición con los datos actuales de la tarea y sus validaciones.
+
+![Edición de tarea](docs/capturas/08-editar-tarea.png)
+
+### 9. Vista móvil (responsive)
+En pantallas pequeñas el diseño se adapta: el botón **Nueva tarea** y los filtros ocupan todo el ancho y se apilan, las columnas del tablero se muestran una debajo de otra, y en el modal los botones se apilan a lo ancho para tocarlos fácilmente.
+
+<table>
+  <tr>
+    <th>Filtros</th>
+    <th>Tablero</th>
+    <th>Nueva tarea</th>
+  </tr>
+  <tr>
+    <td><img src="docs/capturas/09-movil-filtros.png" alt="Filtros en móvil" width="260"></td>
+    <td><img src="docs/capturas/10-movil-tareas.png" alt="Tablero en móvil" width="260"></td>
+    <td><img src="docs/capturas/11-movil-nueva-tarea.png" alt="Nueva tarea en móvil" width="260"></td>
+  </tr>
+</table>
